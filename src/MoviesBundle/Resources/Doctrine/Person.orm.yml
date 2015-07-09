@@ -1,0 +1,26 @@
+MoviesBundle\Entity\Person:
+    type: entity
+    table: person
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            lenght: 45
+        createdAt:
+            type: date
+        updatedAt:
+            type: date
+        dateOfBirth:
+            type: date
+        gender:
+            type: string
+            lenght: 10
+        bio:
+            type: string
+            lenght: 255
+        photo:
+          type: string
+            lenght: 255

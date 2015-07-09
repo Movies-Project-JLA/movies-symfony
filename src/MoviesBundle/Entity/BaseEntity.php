@@ -43,7 +43,7 @@ abstract class BaseEntity {
     /**
      * @param mixed $name
      */
-    public function setName($name)
+    public function setName(string $name)
     {
         $this->name = $name;
     }
@@ -59,7 +59,7 @@ abstract class BaseEntity {
     /**
      * @param mixed $createdAt
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -75,7 +75,7 @@ abstract class BaseEntity {
     /**
      * @param mixed $updatedAt
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt( \DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
