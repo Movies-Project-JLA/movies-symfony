@@ -1,0 +1,6 @@
+person_create:
+    path: /person/create/{id}
+    defaults:  { _controller: MoviesBundle:Person:newPerson, id:0 }
+person_remove:
+    path: /person/remove/{id}
+    defaults:  { _controller: MoviesBundle:Person:removePerson, id:0 }

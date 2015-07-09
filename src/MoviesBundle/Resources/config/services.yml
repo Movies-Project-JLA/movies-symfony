@@ -1,0 +1,4 @@
+services:
+    person:
+        class: MoviesBundle\Manager\PersonService
+        arguments: [ "@doctrine.orm.default_entity_manager" ]

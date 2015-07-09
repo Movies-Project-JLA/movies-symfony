@@ -41,7 +41,7 @@ MoviesBundle\Entity\Movie:
               joinColumn:
                   name: director_id
                   referencedColumnName: id
-    oneToMany:
+    manyToMany:
         actors:
               targetEntity: Person
               joinTable:
@@ -50,7 +50,7 @@ MoviesBundle\Entity\Movie:
                       movie_id:
                           referencedColumnName: id
                   inverseJoinColumns:
-                      person_id:
+                      actor_id:
                           referencedColumnName: id
                           unique: true
 
