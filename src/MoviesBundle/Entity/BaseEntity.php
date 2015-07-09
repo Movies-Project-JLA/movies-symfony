@@ -11,13 +11,13 @@ namespace MoviesBundle\Entity;
 
 abstract class BaseEntity {
 
-    private $id;
+    protected $id;
 
-    private $name;
+    protected $name;
 
-    private $createdAt;
+    protected $createdAt;
 
-    private $updatedAt;
+    protected $updatedAt;
 
     function __construct()
     {

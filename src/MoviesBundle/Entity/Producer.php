@@ -9,22 +9,35 @@
 namespace MoviesBundle\Entity;
 
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 class Producer extends BaseEntity {
-    private $movie;
+
+    private $movies;
+
+    function __construct()
+    {
+        $this->movies = new ArrayCollection();
+    }
+
 
     /**
      * @return mixed
      */
 
-    public function getMovie(){
-        return $this->movie;
+    public function getMovies(){
+        return $this->movies;
     }
 
-    /**
-     * @param mixed $movie
-     */
+    public function addMovie(Movie $movie)
+    {
+        $this->movies[] = $movie;
+        return $this;
+    }
 
-    public function setMovie(Movie $movie){
-        $this->movie = $movie;
+    public function removeMovie(Movie $movie)
+    {
+        $this->movies->removeElement($movie);
+        return $this;
     }
 }

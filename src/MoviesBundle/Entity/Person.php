@@ -8,7 +8,7 @@
 
 namespace MoviesBundle\Entity;
 
-class Person extends BaseEntity{
+class Person extends BaseEntity {
     protected $dateOfBirth;
 
     protected $gender;

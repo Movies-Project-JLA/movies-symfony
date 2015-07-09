@@ -8,7 +8,10 @@
 
 namespace MoviesBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 class Movie extends BaseEntity{
+
     protected $releaseDate;
 
     protected $genre;
@@ -22,6 +25,55 @@ class Movie extends BaseEntity{
     protected $trailer;
 
     protected $producer;
+
+    protected $actors;
+
+    protected $director;
+
+    function __construct()
+    {
+        $this->actors = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getActors()
+    {
+        return $this->actors;
+    }
+
+    /**
+     * @param mixed $actors
+     */
+    public function addActor($actors)
+    {
+        $this->actors[] = $actors;
+        return $this;
+    }
+
+    public function removeActor(Person $actor)
+    {
+        $this->actors->removeElement($actor);
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDirector()
+    {
+        return $this->director;
+    }
+
+    /**
+     * @param mixed $director
+     */
+    public function setDirector(Person $director)
+    {
+        $this->director = $director;
+        return $this;
+    }
 
     /**
      * @return mixed
@@ -37,6 +89,7 @@ class Movie extends BaseEntity{
 
     public function setReleaseDate(\DateTime $date){
         $this->releaseDate = $date;
+        return $this;
     }
 
     /**
@@ -53,6 +106,7 @@ class Movie extends BaseEntity{
 
     public function setGenre(string $genre){
         $this->genre =$genre;
+        return $this;
     }
 
     /**
@@ -69,6 +123,7 @@ class Movie extends BaseEntity{
 
     public function setSynopsis(string $synopsis){
         $this->synopsis =$synopsis;
+        return $this;
     }
 
     /**
@@ -85,6 +140,7 @@ class Movie extends BaseEntity{
 
     public function setPromotionalArt(string $art){
         $this->promotionalArt =$art;
+        return $this;
     }
 
     /**
@@ -101,6 +157,7 @@ class Movie extends BaseEntity{
 
     public function setRating(int $rating){
         $this->rating =$rating;
+        return $this;
     }
 
     /**
@@ -117,6 +174,7 @@ class Movie extends BaseEntity{
 
     public function setTrailer(string $trailer){
         $this->trailer =$trailer;
+        return $this;
     }
 
     /**
@@ -133,5 +191,6 @@ class Movie extends BaseEntity{
 
     public function setProducer(Producer $producer){
         $this->producer =$producer;
+        return $this;
     }
 }

@@ -10,11 +10,11 @@ MoviesBundle\Entity\Person:
             type: string
             lenght: 45
         createdAt:
-            type: date
+            type: datetime
         updatedAt:
-            type: date
+            type: datetime
         dateOfBirth:
-            type: date
+            type: datetime
         gender:
             type: string
             lenght: 10
@@ -22,5 +22,5 @@ MoviesBundle\Entity\Person:
             type: string
             lenght: 255
         photo:
-          type: string
+            type: string
             lenght: 255

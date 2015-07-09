@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0a4b01a094de6d8b0a2faa3c29518cb6",
+    "hash": "6cdfc5a0fdcee038265c8740c9708a6a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1387,16 +1387,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "2.8.x-dev",
+            "version": "v2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "86e77eb36b0fd8bbd6a41f84b5b3cb26b886ace8"
+                "reference": "9975b1eca3de4db792a2c3e4e16f676a4aadcd46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/86e77eb36b0fd8bbd6a41f84b5b3cb26b886ace8",
-                "reference": "86e77eb36b0fd8bbd6a41f84b5b3cb26b886ace8",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/9975b1eca3de4db792a2c3e4e16f676a4aadcd46",
+                "reference": "9975b1eca3de4db792a2c3e4e16f676a4aadcd46",
                 "shasum": ""
             },
             "require": {
@@ -1465,7 +1465,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
@@ -1505,7 +1505,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-07-02 15:16:00"
+            "time": "2015-05-30 16:52:28"
         },
         {
             "name": "twig/twig",
@@ -1617,9 +1617,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "symfony/symfony": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
