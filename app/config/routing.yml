@@ -1,3 +1,6 @@
 person:
     resource: "@MoviesBundle/Resources/config/routing.yml"
     prefix:   /person
+home:
+    path:  /
+    defaults:  { _controller: MoviesBundle:Home:index }
