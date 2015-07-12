@@ -20,22 +20,18 @@ class PersonService {
         $this->entityManager = $entityManager;
     }
 
-    public function getPersons()
-    {
+    public function getPersons() {
         return $this->entityManager->getRepository('MoviesBundle:Person')->findAll();
     }
 
-    public function persistPerson($person)
-    {
-        try {
-            $this->entityManager->persist($person);
-            $this->entityManager->flush();
-        } catch(ORMException $e) {
-            return false;
-        } catch(\Exception $e) {
+    public function getPerson($id) {
+        $person = $this->entityManager->getRepository('MoviesBundle:Person')->findOneById($id);
+
+        if (!$person) {
             return false;
         }
-        return true;
+
+        return $person;
     }
 
     public function removePerson($person)

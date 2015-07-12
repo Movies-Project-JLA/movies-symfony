@@ -9,18 +9,25 @@ MoviesBundle\Entity\Person:
         name:
             type: string
             lenght: 45
+            nullable: false
         createdAt:
             type: datetime
+            nullable: false
         updatedAt:
             type: datetime
+            nullable: true
         dateOfBirth:
             type: datetime
+            nullable: true
         gender:
             type: string
             lenght: 10
+            nullable: false
         bio:
             type: string
             lenght: 255
+            nullable: true
         photo:
             type: string
             lenght: 255
+            nullable: true

@@ -13,21 +13,27 @@ MoviesBundle\Entity\Movie:
             type: datetime
         updatedAt:
             type: datetime
+            nullable: true
         releaseDate:
             type: datetime
+            nullable: true
         genre:
             type: string
             lenght: 255
         synopsis:
             type: string
             lenght: 255
+            nullable: true
         promotionalArt:
             type: string
             lenght: 255
+            nullable: true
         rating:
             type: float
+            nullable: true
         trailer:
             type: string
+            nullable: true
     manyToOne:
         producer:
             targetEntity: Producer

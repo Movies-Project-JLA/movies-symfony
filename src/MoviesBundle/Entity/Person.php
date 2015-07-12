@@ -45,7 +45,7 @@ class Person extends BaseEntity {
      * @param mixed $gender
      */
 
-    public function setGender(string $gender){
+    public function setGender($gender){
         $this->gender =$gender;
     }
 
@@ -61,7 +61,7 @@ class Person extends BaseEntity {
      * @param mixed $bio
      */
 
-    public function setBio(string $bio){
+    public function setBio($bio){
         $this->bio =$bio;
     }
 
@@ -77,7 +77,7 @@ class Person extends BaseEntity {
      * @param mixed $bio
      */
 
-    public function setPhoto(string $photo){
+    public function setPhoto($photo){
         $this->photo =$photo;
     }
 }

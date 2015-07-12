@@ -26,24 +26,26 @@ class PersonType extends AbstractType {
             ->add('gender', 'choice', array(
                 'empty_value' => 'Select a gender',
                 'choices' => array(
-                    'Male' => 'male',
-                    'Female' => 'female'
+                    'male' => 'Male',
+                    'female' => 'Female'
                 ),
                 'required' => true,
                 'label' => 'Gender'
             ))
-            ->add('dateOfBirth', 'datetime', array(
+            ->add('dateOfBirth', 'date', array(
                 'required' => true,
-                'label' => 'Date of birth'
+                'label' => 'Date of birth',
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
             ))
             ->add('bio', 'textarea', array(
                 'required' => false,
                 'label' => 'Bio'
             ))
-            ->add('photo', 'file', array(
+            /*->add('photo', 'file', array(
                 'required' => false,
                 'label' => 'Photo'
-            ))
+            ))*/
             ->add('Submit', 'submit')
             ->setMethod('POST');
     }

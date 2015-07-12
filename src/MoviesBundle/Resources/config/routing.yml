@@ -1,6 +1,15 @@
 person_create:
-    path: /person/create/{id}
-    defaults:  { _controller: MoviesBundle:Person:newPerson, id:0 }
+    path: /create/
+    defaults:  { _controller: MoviesBundle:Person:new }
 person_remove:
-    path: /person/remove/{id}
-    defaults:  { _controller: MoviesBundle:Person:removePerson, id:0 }
+    path: /remove/{id}
+    defaults:  { _controller: MoviesBundle:Person:remove, id:0 }
+person_list:
+    path:  /list
+    defaults:  { _controller: MoviesBundle:Person:list }
+person_view:
+    path:  /view/{id}
+    defaults:  { _controller: MoviesBundle:Person:view, id:0 }
+person_persist:
+    path:  /persist
+    defaults:  { _controller: MoviesBundle:Person:persist }

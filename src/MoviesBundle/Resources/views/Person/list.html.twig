@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <ul>
+        {% for person in persons %}
+            <li><a href="{{ url("person_view", {id: person.id}) }}">{{ person.name }}</a></li>
+        {% else %}
+            <li>There's no persons on database</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url('person_create') }}">New</a>
+{% endblock %}

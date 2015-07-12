@@ -104,7 +104,7 @@ class Movie extends BaseEntity{
      * @param mixed $genre
      */
 
-    public function setGenre(string $genre){
+    public function setGenre($genre){
         $this->genre =$genre;
         return $this;
     }
@@ -121,7 +121,7 @@ class Movie extends BaseEntity{
      * @param mixed $synopsis
      */
 
-    public function setSynopsis(string $synopsis){
+    public function setSynopsis($synopsis){
         $this->synopsis =$synopsis;
         return $this;
     }
@@ -138,7 +138,7 @@ class Movie extends BaseEntity{
      * @param mixed $art
      */
 
-    public function setPromotionalArt(string $art){
+    public function setPromotionalArt($art){
         $this->promotionalArt =$art;
         return $this;
     }
@@ -155,7 +155,7 @@ class Movie extends BaseEntity{
      * @param mixed $rating
      */
 
-    public function setRating(int $rating){
+    public function setRating($rating){
         $this->rating =$rating;
         return $this;
     }
@@ -172,7 +172,7 @@ class Movie extends BaseEntity{
      * @param mixed $trailer
      */
 
-    public function setTrailer(string $trailer){
+    public function setTrailer($trailer){
         $this->trailer =$trailer;
         return $this;
     }
