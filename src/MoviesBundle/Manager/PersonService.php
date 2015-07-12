@@ -34,16 +34,15 @@ class PersonService {
         return $person;
     }
 
-    public function removePerson($person)
+    public function removePerson($id)
     {
-        try {
+        $person = $this->entityManager->getRepository('MoviesBundle:Person')->find($id);
+
+        if ($person) {
             $this->entityManager->remove($person);
             $this->entityManager->flush();
-        } catch(ORMException $e) {
-            return false;
-        } catch(\Exception $e) {
-            return false;
         }
+
         return true;
     }
 
